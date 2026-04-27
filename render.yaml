@@ -1,7 +1,7 @@
 services:
   - type: web
     name: sidian-website
-    rootDir: src/sidian_website
+    rootDir: sidian_website
     runtime: node
     buildCommand: npm install && npm run build
     startCommand: node dist/sidian_website/server/server.mjs

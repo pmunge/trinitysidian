@@ -1,0 +1,16 @@
+<section class="services">
+  <div class="container">
+    <div class="heading">
+      <h2 class="service-heading">Lab Services</h2>
+    </div>
+    <div class="cards-row">
+      <div class="service-card" *ngFor="let lab of labServices">
+        <img class="lab-image" [src]="lab.image" alt="lab.name">
+        <h5 class="card-title">{{ lab.name }}</h5>
+        <p class="card-text">
+          {{ lab.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

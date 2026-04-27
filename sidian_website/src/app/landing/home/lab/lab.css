@@ -1,0 +1,130 @@
+/* ── Services Section ── */
+.services {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.services .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Heading ── */
+.service-heading {
+  text-align: center;
+  font-size: 32px;
+  color: #AA60C8;
+  margin-bottom: 48px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ── Grid ── */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* ── Card ── */
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(170, 96, 200, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(170, 96, 200, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* slide-in default state */
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(170, 96, 200, 0.2);
+}
+
+/* ── Slide-in: left column (odd cards) ── */
+.service-card:nth-child(odd) {
+  transform: translateX(-80px);
+}
+
+/* ── Slide-in: right column (even cards) ── */
+.service-card:nth-child(even) {
+  transform: translateX(80px);
+}
+
+/* ── Animate-in class (added via IntersectionObserver) ── */
+.service-card.animate-in {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.service-card:nth-child(even).animate-in {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+/* stagger each card slightly */
+.service-card:nth-child(1).animate-in { animation-delay: 0s; }
+.service-card:nth-child(2).animate-in { animation-delay: 0.1s; }
+.service-card:nth-child(3).animate-in { animation-delay: 0.2s; }
+.service-card:nth-child(4).animate-in { animation-delay: 0.3s; }
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Image ── */
+.lab-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Card body ── */
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #AA60C8;
+  margin: 20px 20px 8px;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #D69ADE;
+  margin: 0 20px 24px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .services { padding: 50px 5%; }
+
+  .cards-row {
+    grid-template-columns: 1fr; /* single column */
+    gap: 24px;
+  }
+
+  /* on mobile all cards slide up instead */
+  .service-card:nth-child(odd),
+  .service-card:nth-child(even) {
+    transform: translateY(40px);
+  }
+
+  .service-card.animate-in,
+  .service-card:nth-child(even).animate-in {
+    animation: slideUp 0.6s ease forwards;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}

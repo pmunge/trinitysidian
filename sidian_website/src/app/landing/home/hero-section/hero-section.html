@@ -1,0 +1,15 @@
+<section class="hero section">
+    <div class="left_side">
+        <h2> Sidian Trinity</h2>
+        <p> Your Next medical center for medical emergencies</p>
+    </div>
+    <div class="right_side">
+        <img src="/images/doctor-hero.png" alt="Doctor hero image">
+    </div>
+    <div class="stats-strip">
+        <div class="stat-item" *ngFor="let stat of stats">
+            <span class="stat-num">{{stat.value}}</span>
+            <span class="stat-label">{{stat.label}}</span>
+        </div>
+    </div>
+</section>

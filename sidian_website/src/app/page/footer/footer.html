@@ -1,0 +1,166 @@
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Locations Section -->
+        <div class="footer-section locations-section">
+          <h3 class="footer-title">
+            <i class="icon-location"></i>
+            Our Locations
+          </h3>
+          <div class="locations-wrapper">
+            <div *ngFor="let location of locations" class="location-card" [class.main-location]="location.isMain">
+              <div class="location-header">
+                <h4 class="location-name">
+                  {{ location.name }}
+                  <span *ngIf="location.isMain" class="badge-main">Main</span>
+                </h4>
+              </div>
+              
+              <div class="location-details">
+                <div class="detail-item">
+                  <i class="icon-map-pin"></i>
+                  <div class="detail-content">
+                    <p>{{ location.address }}</p>
+                    <p>{{ location.city }}</p>
+                    <p>{{ location.country }}</p>
+                  </div>
+                </div>
+                
+                <div class="detail-item">
+                  <i class="icon-phone"></i>
+                  <div class="detail-content">
+                    <a href="tel:{{ location.phone }}" class="contact-link">{{ location.phone }}</a>
+                    <button class="copy-btn" (click)="copyToClipboard(location.phone, 'Phone number')" title="Copy phone number">
+                      <i class="icon-copy"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="detail-item">
+                  <i class="icon-mail"></i>
+                  <div class="detail-content">
+                    <a href="mailto:{{ location.email }}" class="contact-link">{{ location.email }}</a>
+                    <button class="copy-btn" (click)="copyToClipboard(location.email, 'Email')" title="Copy email">
+                      <i class="icon-copy"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="detail-item hours">
+                  <i class="icon-clock"></i>
+                  <div class="detail-content">
+                    <p class="hours-text">{{ location.hours }}</p>
+                    <p class="weekend-hours">{{ location.weekend }}</p>
+                  </div>
+                </div>
+                
+                <button class="btn-maps" (click)="openMaps(location)">
+                  <i class="icon-navigation"></i>
+                  Get Directions
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contacts Section -->
+        <div class="footer-section contacts-section">
+          <h3 class="footer-title">
+            <i class="icon-contact"></i>
+            Contact Us
+          </h3>
+          
+          <div class="contact-grid">
+            <!-- General Contact -->
+            <div class="contact-group">
+              <h4 class="contact-subtitle">General Inquiries</h4>
+              <div class="contact-items">
+                <div class="contact-item">
+                  <i class="icon-phone-call"></i>
+                  <div>
+                    <span class="contact-label">Phone:</span>
+                    <a href="tel:{{ contactInfo.general.phone }}" class="contact-value">{{ contactInfo.general.phone }}</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <i class="icon-mail"></i>
+                  <div>
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:{{ contactInfo.general.email }}" class="contact-value">{{ contactInfo.general.email }}</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item emergency">
+                  <i class="icon-alert-circle"></i>
+                  <div>
+                    <span class="contact-label emergency-label">24/7 Emergency:</span>
+                    <a href="tel:{{ contactInfo.general.emergency }}" class="contact-value emergency-value">{{ contactInfo.general.emergency }}</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <i class="icon-printer"></i>
+                  <div>
+                    <span class="contact-label">Fax:</span>
+                    <span class="contact-value">{{ contactInfo.general.fax }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <!-- Social Media -->
+          <div class="social-section">
+            <h4 class="contact-subtitle">Connect With Us</h4>
+            <div class="social-links">
+              <a [href]="contactInfo.social.facebook" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Facebook">
+                <i class="icon-facebook"></i>
+              </a>
+              <a [href]="contactInfo.social.twitter" target="_blank" rel="noopener noreferrer" class="social-link twitter" aria-label="Twitter">
+                <i class="icon-twitter"></i>
+              </a>
+              <a [href]="contactInfo.social.instagram" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram">
+                <i class="icon-instagram"></i>
+              </a>
+              <a [href]="contactInfo.social.linkedin" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn">
+                <i class="icon-linkedin"></i>
+              </a>
+              <a [href]="contactInfo.social.youtube" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="YouTube">
+                <i class="icon-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p>&copy; {{ currentYear }} City Care Clinic. All rights reserved.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="quick-links">
+            <a *ngFor="let link of quickLinks" [routerLink]="link.path" class="footer-link">{{ link.name }}</a>
+          </div>
+          <div class="legal-links">
+            <a *ngFor="let link of legalLinks" [routerLink]="link.path" class="footer-link legal">{{ link.name }}</a>
+          </div>
+        </div>
+        
+        <button class="scroll-top" (click)="scrollToTop()" aria-label="Scroll to top">
+          <i class="icon-chevron-up"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

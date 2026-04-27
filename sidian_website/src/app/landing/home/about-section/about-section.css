@@ -1,0 +1,103 @@
+/* ── About Section ── */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 80px 8%;
+  background: #fff;
+}
+
+/* ── Heading ── */
+.heading_part {
+  width: 100%;
+  margin-bottom: -16px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #AA60C8;
+  position: relative;
+  display: inline-block;
+}
+
+/* decorative underline on heading */
+.heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #AA60C8;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ── Left ── */
+.left-details {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* vertical accent line */
+.left-details::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #AA60C8, #D69ADE);
+  border-radius: 2px;
+}
+
+.left-details p {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Right ── */
+.right-details {
+  flex: 2;
+  min-width: 280px;
+}
+
+.the_details {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #000;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.the_details b {
+  color: #AA60C8;
+  font-weight: 700;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 32px;
+    padding: 50px 5%;
+  }
+
+  .left-details {
+    max-width: 100%;
+  }
+
+  .left-details p {
+    font-size: 18px;
+  }
+
+  .the_details {
+    font-size: 15px;
+  }
+}

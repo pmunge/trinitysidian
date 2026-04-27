@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+.doctors {
+  padding: 1.5rem 1.25rem;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+.service-heading {
+  margin: 0;
+  color: #AA60C8;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.cards-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #D69ADE #EABDE6;
+}
+
+.doctor-card {
+  min-width: 255px;
+  flex: 1 0 255px;
+  background: #ffffff;
+  border: 1px solid #EABDE6;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(10, 61, 54, 0.08);
+}
+
+.card-title {
+  margin: 0;
+  color: #AA60C8;
+  font-size: 1.05rem;
+}
+
+.card-text {
+  margin: 0.65rem 0 0.35rem;
+  color: #D69ADE;
+  line-height: 1.5;
+}
+
+.card-contact {
+  margin: 0 0 1rem;
+  color: #D69ADE;
+  font-size: 0.9rem;
+}
+
+.card-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #AA60C8;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .doctors {
+    padding: 1rem;
+  }
+}

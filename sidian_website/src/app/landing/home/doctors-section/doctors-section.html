@@ -1,0 +1,15 @@
+<section class="doctors">
+  <div class="container">
+    <div class="heading">
+      <h2 class="service-heading">Our Doctors</h2>
+    </div>
+    <div class="cards-row">
+      <div class="doctor-card" *ngFor="let doctor of doctors">
+        <h5 class="card-title">{{ doctor.name }}</h5>
+        <p class="card-text">{{ doctor.speciality }}</p>
+        <p class="card-contact">{{ doctor.contact }}</p>
+        <a href="#" class="card-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</section>

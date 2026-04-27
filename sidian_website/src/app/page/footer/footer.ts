@@ -46,11 +46,11 @@ export class Footer {
     {
       name: 'Main Clinic',
       isMain: true,
-      address: '123 Health Street',
+      address: 'Zimmerman',
       city: 'Nairobi',
       country: 'Kenya',
       phone: '+254 700 123 456',
-      email: 'info@citycareclinic.co.ke',
+      email: 'info@sidiantrinity.co.ke',
       hours: 'Mon-Fri: 8AM-8PM',
       weekend: 'Sat: 9AM-5PM, Sun: Closed'
     },
@@ -59,7 +59,7 @@ export class Footer {
   contactInfo: ContactInfo = {
     general: {
       phone: '+254 700 123 456',
-      email: 'info@citycareclinic.co.ke',
+      email: 'info@sidiantrinity.co.ke',
       emergency: '+254 700 999 911',
       fax: '+254 20 123 4567'
     },

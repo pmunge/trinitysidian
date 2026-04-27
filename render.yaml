@@ -2,7 +2,7 @@ services:
   - type: web
     name: sidian-website
     rootDir: sidian_website
-    runtime: node
+    runtime: static
     buildCommand: npm install && npm run build
     startCommand: node dist/sidian_website/server/server.mjs
     envVars:

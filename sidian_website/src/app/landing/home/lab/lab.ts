@@ -1,7 +1,9 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LabService } from '../../../models/clinic';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-lab',
@@ -11,6 +13,9 @@ import { LabService } from '../../../models/clinic';
   styleUrl: './lab.css',
 })
 export class Lab implements AfterViewInit  {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ){}
   labServices: LabService[] = [
     {
       name: 'Blood Test',
@@ -35,7 +40,9 @@ export class Lab implements AfterViewInit  {
   ]
 
   ngAfterViewInit() {
-    this.initAnimations();
+    if (isPlatformBrowser(this.platformId)) {
+      this.initAnimations();
+    }
   }
 
   private initAnimations() {

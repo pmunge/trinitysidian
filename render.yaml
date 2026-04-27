@@ -3,4 +3,4 @@ services:
     name: sidian-website
     runtime: static
     buildCommand: cd sidian_website && npm install && npm run build && node --max-old-space-size=512 ./node_modules/@angular/cli/bin/ng.js build
-    staticPublishPath: sidian_website/dist/sidian_website
+    staticPublishPath: sidian_website/dist/sidian_website/browser

@@ -1,10 +1,6 @@
 services:
   - type: web
     name: sidian-website
-    rootDir: sidian_website
     runtime: static
-    buildCommand: npm install && npm run build
-    startCommand: node dist/sidian_website/server/server.mjs
-    envVars:
-      - key: NODE_ENV
-        value: production
+    buildCommand: cd sidian_website && npm install && npm run build
+    staticPublishPath: sidian_website/dist/sidian_website/browser

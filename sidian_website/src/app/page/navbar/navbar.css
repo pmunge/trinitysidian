@@ -1,4 +1,4 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
 
 .navbar {
   background: #fff;
@@ -30,7 +30,7 @@
 }
 
 .brand img {
-  max-height: 48px;
+  max-height: 72px;
   width: auto;
   height: auto;
   vertical-align: middle;
@@ -88,7 +88,7 @@
   display: block;
   width: 22px;
   height: 1.5px;
-  background: #f0ece3;
+  background: #AA60C8;
   transition: transform 0.25s, opacity 0.2s;
   transform-origin: center;
 }

@@ -1,15 +1,30 @@
 <nav class="navbar">
-    <div class="nav-shell">
-        <a class="brand" routerLink="/">
-            <img src="images/logo.png" alt="Sidian Trinity Logo">
-        </a>
-        <ul class="nav-links">
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/services">Services</a></li>
-            <li><a routerLink="/lab">Lab</a></li>
-            <li><a routerLink="/doctors">Doctors</a></li>
-        </ul>
-        <a class="nav-cta" href="#">Book Appointment</a>
-    </div>
+  <div class="nav-shell">
+    <a class="brand" routerLink="/">
+      <img src="images/logo.png" alt="Sidian Trinity Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about" fragment="about">About</a></li>
+      <li><a routerLink="/services" fragment="services">Services</a></li>
+      <li><a routerLink="/lab" fragment="lab">Lab</a></li>
+      <li><a routerLink="/doctors" fragment="doctor">Doctors</a></li>
+    </ul>
+    <a class="nav-cta" href="#">Book Appointment</a>
+
+    <!-- ADD THIS -->
+    <button class="hamburger" [class.open]="menuOpen" (click)="menuOpen = !menuOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- ADD THIS -->
+  <ul class="mobile-menu" [class.open]="menuOpen">
+    <li><a routerLink="/"  (click)="menuOpen = false">Home</a></li>
+    <li><a routerLink="/about" fragment="about"(click)="menuOpen = false">About</a></li>
+    <li><a routerLink="/services" fragment="services" (click)="menuOpen = false">Services</a></li>
+    <li><a routerLink="/lab" fragment="lab" (click)="menuOpen = false">Lab</a></li>
+    <li><a routerLink="/doctors" fragment="doctors"(click)="menuOpen = false">Doctors</a></li>
+    <a class="mobile-cta" href="#">Book Appointment</a>
+  </ul>
 </nav>

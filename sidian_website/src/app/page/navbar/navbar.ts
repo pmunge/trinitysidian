@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  isMenuCollapsed = true;
+  menuOpen = false;
   isScrolled! : any;
 
   navItems = [
@@ -21,8 +21,9 @@ export class Navbar {
     {path:'/doctors', label: 'Doctors'},
     {path: '/contact', label: 'Contact'},
   ]
+  
   @HostListener('window:scroll')
   onScroll(){
     this.isScrolled = window.scrollY > 80;
-  }
+  };
 }

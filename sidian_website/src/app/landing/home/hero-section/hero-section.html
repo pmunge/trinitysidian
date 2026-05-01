@@ -10,7 +10,7 @@
     </div>
     <div class="stats-strip">
         <div class="stat-item" *ngFor="let stat of stats">
-            <span class="stat-num">{{stat.value}}</span>
+            <span class="stat-num">{{ stat.display }}{{ stat.suffix }}</span>
             <span class="stat-label">{{stat.label}}</span>
         </div>
     </div>

@@ -4,11 +4,11 @@
       <img src="images/logo.png" alt="Sidian Trinity Logo">
     </a>
     <ul class="nav-links">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about" fragment="about">About</a></li>
-      <li><a routerLink="/services" fragment="services">Services</a></li>
-      <li><a routerLink="/lab" fragment="lab">Lab</a></li>
-      <li><a routerLink="/doctors" fragment="doctor">Doctors</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#labs">Lab</a></li>
+      <li><a href="#doctors">Doctors</a></li>
     </ul>
     <a class="nav-cta" href="#">Book Appointment</a>
 
@@ -20,11 +20,11 @@
 
   <!-- ADD THIS -->
   <ul class="mobile-menu" [class.open]="menuOpen">
-    <li><a routerLink="/"  (click)="menuOpen = false">Home</a></li>
-    <li><a routerLink="/about" fragment="about"(click)="menuOpen = false">About</a></li>
-    <li><a routerLink="/services" fragment="services" (click)="menuOpen = false">Services</a></li>
-    <li><a routerLink="/lab" fragment="lab" (click)="menuOpen = false">Lab</a></li>
-    <li><a routerLink="/doctors" fragment="doctors"(click)="menuOpen = false">Doctors</a></li>
+    <li><a href="#" (click)="menuOpen = false">Home</a></li>
+    <li><a href="#about" (click)="menuOpen = false">About</a></li>
+    <li><a href="#services" (click)="menuOpen = false">Services</a></li>
+    <li><a href="#labs" (click)="menuOpen = false">Lab</a></li>
+    <li><a href="#doctors" (click)="menuOpen = false">Doctors</a></li>
     <a class="mobile-cta" href="#">Book Appointment</a>
   </ul>
 </nav>

@@ -12,6 +12,7 @@ interface Location {
   email: string;
   hours: string;
   weekend: string;
+  mapsUrl?: string;
 }
 
 interface ContactInfo {
@@ -52,7 +53,8 @@ export class Footer {
       phone: '+254 700 123 456',
       email: 'info@sidiantrinity.co.ke',
       hours: 'Mon-Fri: 8AM-8PM',
-      weekend: 'Sat: 9AM-5PM, Sun: Closed'
+      weekend: 'Sat: 9AM-5PM, Sun: Closed',
+      mapsUrl: 'https://maps.app.goo.gl/BdM3azHw2WkrWtX6A'
     },
   ];
 
@@ -99,11 +101,9 @@ export class Footer {
   }
 
   openMaps(location: Location) {
-    const query = `${location.address}, ${location.city}, ${location.country}`;
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-    window.open(url, '_blank');
+  const url = 'https://maps.app.goo.gl/BdM3azHw2WkrWtX6A';
+  window.open(url, '_blank');
   }
-
   scrollToTop() {
     document.documentElement.scrollTop = 0;
     // or window.scrollTo({ top: 0, behavior: 'smooth' });

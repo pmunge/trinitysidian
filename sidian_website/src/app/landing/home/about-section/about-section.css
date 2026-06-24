@@ -1,17 +1,13 @@
 /* ── About Section ── */
 .about {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 48px;
   padding: 80px 8%;
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #fcf7fe 100%);
 }
 
 /* ── Heading ── */
 .heading_part {
   width: 100%;
-  margin-bottom: -16px;
+  margin-bottom: 28px;
 }
 
 .heading {
@@ -22,7 +18,6 @@
   display: inline-block;
 }
 
-/* decorative underline on heading */
 .heading::after {
   content: '';
   display: block;
@@ -33,16 +28,24 @@
   margin-top: 8px;
 }
 
-/* ── Left ── */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.about-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .left-details {
-  flex: 1;
-  min-width: 260px;
-  max-width: 380px;
   position: relative;
   padding-left: 20px;
 }
 
-/* vertical accent line */
 .left-details::before {
   content: '';
   position: absolute;
@@ -58,20 +61,18 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
-  color: #000;
+  color: #222;
   margin: 0;
 }
 
-/* ── Right ── */
 .right-details {
-  flex: 2;
-  min-width: 280px;
+  max-width: 620px;
 }
 
 .the_details {
   font-size: 16px;
   line-height: 1.85;
-  color: #000;
+  color: #444;
   margin: 0;
   white-space: pre-line;
 }
@@ -81,16 +82,37 @@
   font-weight: 700;
 }
 
-/* ── Mobile ── */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    gap: 32px;
-    padding: 50px 5%;
+.about-image-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(170, 96, 200, 0.16);
+  background: #fff;
+  padding: 10px;
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ── Tablet and Mobile ── */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .left-details {
-    max-width: 100%;
+  .about-image-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 50px 5%;
   }
 
   .left-details p {
@@ -99,5 +121,9 @@
 
   .the_details {
     font-size: 15px;
+  }
+
+  .about-image-card img {
+    height: 260px;
   }
 }

@@ -2,7 +2,7 @@ export interface Service{
     id: number,
     title: string,
     description: string,
-    image: string
+
 }
 
 export interface Tip {
@@ -30,7 +30,8 @@ export interface Testimonial {
 export interface LabService {
     name: string,
     description: string,
-    image: string
+    image: string,
+    category: 'blood' | 'urine' | 'stool';
 }
 export interface Stat{
     value: string,

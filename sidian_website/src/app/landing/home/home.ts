@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroSection } from './hero-section/hero-section';
 import { AboutSection } from './about-section/about-section';
-import { ServicesSection } from './services-section/services-section';
+import { ServicesComponent } from './services-section/services-section';
 import { Lab } from './lab/lab';
 import { TestimonialsSection } from './testimonials-section/testimonials-section';
 import { DoctorsSection } from './doctors-section/doctors-section';
@@ -16,7 +16,7 @@ import { DoctorsSection } from './doctors-section/doctors-section';
     RouterModule,
     HeroSection,
     AboutSection,
-    ServicesSection,
+    ServicesComponent,
     DoctorsSection,
     Lab,
     TestimonialsSection

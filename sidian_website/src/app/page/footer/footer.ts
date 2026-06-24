@@ -66,11 +66,11 @@ export class Footer {
       fax: '+254 20 123 4567'
     },
     social: {
-      facebook: 'https://facebook.com/citycareclinic',
-      twitter: 'https://twitter.com/citycareclinic',
-      instagram: 'https://instagram.com/citycareclinic',
-      linkedin: 'https://linkedin.com/company/citycareclinic',
-      youtube: 'https://youtube.com/citycareclinic'
+      facebook: 'https://facebook.com/sidiantrinity',
+      twitter: 'https://twitter.com/sidiantrinity',
+      instagram: 'https://instagram.com/sidiantrinity',
+      linkedin: 'https://linkedin.com/company/sidiantrinity',
+      youtube: 'https://youtube.com/sidiantrinity'
     }
   };
 

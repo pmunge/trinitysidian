@@ -1,16 +1,60 @@
-<section class="services" id="labs">
-  <div class="container">
-    <div class="heading">
-      <h2 class="service-heading">Lab Services</h2>
-    </div>
-    <div class="cards-row">
-      <div class="service-card" *ngFor="let lab of labServices">
-        <img class="lab-image" [src]="lab.image" alt="lab.name">
-        <h5 class="card-title">{{ lab.name }}</h5>
-        <p class="card-text">
-          {{ lab.description }}
-        </p>
-      </div>
-    </div>
+<section class="lab-section">
+
+  <div class="header">
+    <h1>Laboratory Services</h1>
+    <p>Accurate and fast diagnostic testing</p>
   </div>
-</section>
+
+  <mat-tab-group>
+
+    <!-- BLOOD TESTS -->
+    <mat-tab label="Blood Tests">
+      <div class="grid">
+        <mat-card class="lab-card"
+          *ngFor="let s of labServices.filter(x => x.category === 'blood')">
+
+          <mat-card-title>{{ s.name }}</mat-card-title>
+
+          <mat-card-content>
+            <p>{{ s.description }}</p>
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <!-- URINE TESTS -->
+    <mat-tab label="Urine Tests">
+      <div class="grid">
+        <mat-card class="lab-card"
+          *ngFor="let s of labServices.filter(x => x.category === 'urine')">
+
+          <mat-card-title>{{ s.name }}</mat-card-title>
+
+          <mat-card-content>
+            <p>{{ s.description }}</p>
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <!-- STOOL TESTS -->
+    <mat-tab label="Stool Tests">
+      <div class="grid">
+        <mat-card class="lab-card"
+          *ngFor="let s of labServices.filter(x => x.category === 'stool')">
+
+          <mat-card-title>{{ s.name }}</mat-card-title>
+
+          <mat-card-content>
+            <p>{{ s.description }}</p>
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+
+</section> 

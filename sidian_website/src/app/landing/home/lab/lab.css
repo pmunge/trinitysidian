@@ -1,83 +1,52 @@
-/* ── Services Section ── */
-.services {
-  padding: 80px 8%;
-  background: #fff;
+.lab-card{
+  background-color: #fff;
 }
 
-.services .container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ── Heading ── */
-.service-heading {
+.header {
+  width: 100%;
   text-align: center;
-  font-size: 32px;
-  color: #AA60C8;
-  margin-bottom: 48px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
-
-/* ── Grid ── */
-.cards-row {
+.tab-content {
+  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+::ng-deep .mat-mdc-tab-body-content {
+  padding-top: 2rem;
+}
+::ng-deep .mat-mdc-tab-body-content {
+  overflow: visible !important;
+}
+::ng-deep .mat-mdc-tab-body-wrapper {
+  height: 550px; /* pick what fits your UI */
+}
+.grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
 }
-
-/* ── Card ── */
-.service-card {
-  background: #fff;
+.lab-card {
+  padding: 1.5rem;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(170, 96, 200, 0.1);
-  overflow: hidden;
-  border: 1px solid rgba(170, 96, 200, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* slide-in default state */
-  opacity: 0;
-  transform: translateX(0);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
 }
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(170, 96, 200, 0.2);
+mat-card-title {
+  display: block;
+  margin-bottom: 1rem;
+  color: #133633;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
-
-/* ── Slide-in: left column (odd cards) ── */
-.service-card:nth-child(odd) {
-  transform: translateX(-80px);
-}
-
-/* ── Slide-in: right column (even cards) ── */
-.service-card:nth-child(even) {
-  transform: translateX(80px);
-}
-
-/* ── Animate-in class (added via IntersectionObserver) ── */
-.service-card.animate-in {
-  animation: slideInLeft 0.6s ease forwards;
-}
-
-.service-card:nth-child(even).animate-in {
-  animation: slideInRight 0.6s ease forwards;
-}
-
-/* stagger each card slightly */
-.service-card:nth-child(1).animate-in { animation-delay: 0s; }
-.service-card:nth-child(2).animate-in { animation-delay: 0.1s; }
-.service-card:nth-child(3).animate-in { animation-delay: 0.2s; }
-.service-card:nth-child(4).animate-in { animation-delay: 0.3s; }
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-80px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(80px); }
-  to   { opacity: 1; transform: translateX(0); }
+mat-card-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #5f7570;
 }
 
 /* ── Image ── */

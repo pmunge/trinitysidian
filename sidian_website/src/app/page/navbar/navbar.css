@@ -69,7 +69,7 @@
   transition: background 0.2s;
 }
 
-.nav-cta:hover { background: #dbbe87; }
+.nav-cta:hover { background: #AA60C8; }
 
 .hamburger {
   display: none;
@@ -123,7 +123,7 @@
 .mobile-cta {
   display: block;
   margin-top: 1.25rem;
-  background: #c9a96e;
+  background: #AA60C8;
   color: #0d1117;
   text-decoration: none;
   font-size: 13px;

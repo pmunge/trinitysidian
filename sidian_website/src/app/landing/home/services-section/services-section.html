@@ -14,6 +14,7 @@
       <!-- Left Cards (First 2 Services) -->
       <div class="cards-column">
         <div class="service-card" *ngFor="let service of services.slice(0,2)">
+          <h4 class="card_id">{{service.id}}</h4>
           <h5 class="card-title">{{ service.title }}</h5>
           <p class="card-text">{{ service.description }}</p>
         </div>
@@ -27,6 +28,7 @@
       <!-- Right Cards (Last 2 Services) -->
       <div class="cards-column">
         <div class="service-card" *ngFor="let service of services.slice(2,4)">
+          <h4 class="card_id">{{service.id}}</h4>
           <h5 class="card-title">{{ service.title }}</h5>
           <p class="card-text">{{ service.description }}</p>
         </div>

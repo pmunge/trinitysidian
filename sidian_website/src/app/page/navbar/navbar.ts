@@ -26,4 +26,23 @@ export class Navbar {
   onScroll(){
     this.isScrolled = window.scrollY > 80;
   };
+
+  scrollToSection(sectionId: string, event?: Event): void {
+    event?.preventDefault();
+    this.menuOpen = false;
+
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      return;
+    }
+
+    const offset = 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
 }

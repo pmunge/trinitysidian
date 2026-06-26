@@ -2,14 +2,21 @@
   <div class="container">
     <div class="heading">
       <h2 class="service-heading">Our Doctors</h2>
-    </div>
-    <div class="cards-row">
-      <div class="doctor-card" *ngFor="let doctor of doctors">
-        <h5 class="card-title">{{ doctor.name }}</h5>
-        <p class="card-text">{{ doctor.speciality }}</p>
-        <p class="card-contact">{{ doctor.contact }}</p>
-        <a href="#" class="card-btn">Go somewhere</a>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" (click)="scrollCarousel('left')" aria-label="Scroll left">←</button>
+        <button type="button" class="carousel-btn" (click)="scrollCarousel('right')" aria-label="Scroll right">→</button>
       </div>
+    </div>
+
+    <div class="cards-row" #cardsRow>
+      <article class="doctor-card" *ngFor="let doctor of doctors">
+        <img class="doctor-image" [src]="doctor.image" [alt]="doctor.name" />
+        <div class="card-body">
+          <h5 class="card-title">{{ doctor.name }}</h5>
+          <p class="card-text">{{ doctor.speciality }}</p>
+          <p class="card-contact">{{ doctor.contact }}</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>

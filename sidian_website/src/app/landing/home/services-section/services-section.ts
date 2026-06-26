@@ -21,22 +21,22 @@ export class ServicesComponent {
   services: Service[] = [
     {
       id: 1,
-      title: 'Natural Wellness',
-      description: 'Discover organic solutions designed to enhance your daily life and promote sustainable living practices.'
+      title: 'Routine Health Check-Ups',
+      description: 'Stay on top of your health with regular medical check-ups designed to detect potential concerns early. Our comprehensive assessments help you maintain a healthier lifestyle and provide peace of mind for you and your family.'
     },
     { 
       id: 2,
-      title: 'Expert Guidance',
-      description: 'Our specialists provide personalized advice to help you make informed choices for your health.'
+      title: 'General Medical Consultation',
+      description: 'Receive personalized care from experienced healthcare professionals who take the time to understand your concerns. We provide accurate diagnoses, treatment plans, and guidance to help you recover and stay healthy.'
     },
     { 
       id:3,
-      title: 'Premium Quality',
-      description: 'Each product is carefully curated and tested to ensure the highest standards of excellence.'
+      title: 'Laboratory & Diagnostic Services',
+      description: 'Our laboratory offers reliable diagnostic testing to support timely and accurate medical decisions. From routine blood work to essential screenings, we deliver results you can trust.'
     },
     { id: 4,
-      title: 'Community Focus',
-      description: 'Join our growing community of wellness enthusiasts committed to sustainable and healthy living.'
+      title: 'Chronic Disease Management',
+      description: 'Living with a chronic condition does not mean facing it alone. We provide continuous monitoring, personalized treatment plans, and regular follow-up care to help you effectively manage diabetes, hypertension, asthma, and other long-term health conditions.'
     }
   ];
 

@@ -4,13 +4,13 @@
       <img src="images/logo.png" alt="Sidian Trinity Logo">
     </a>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#labs">Lab</a></li>
-      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#" (click)="scrollToSection('home', $event)">Home</a></li>
+      <li><a href="#about" (click)="scrollToSection('about', $event)">About</a></li>
+      <li><a href="#services" (click)="scrollToSection('services', $event)">Services</a></li>
+      <li><a href="#labs" (click)="scrollToSection('labs', $event)">Lab</a></li>
+      <li><a href="#doctors" (click)="scrollToSection('doctors', $event)">Doctors</a></li>
     </ul>
-    <a class="nav-cta" href="#">Book Appointment</a>
+    <a class="nav-cta" href="#" (click)="scrollToSection('doctors', $event)">Book Appointment</a>
 
     <!-- ADD THIS -->
     <button class="hamburger" [class.open]="menuOpen" (click)="menuOpen = !menuOpen">
@@ -20,11 +20,11 @@
 
   <!-- ADD THIS -->
   <ul class="mobile-menu" [class.open]="menuOpen">
-    <li><a href="#" (click)="menuOpen = false">Home</a></li>
-    <li><a href="#about" (click)="menuOpen = false">About</a></li>
-    <li><a href="#services" (click)="menuOpen = false">Services</a></li>
-    <li><a href="#labs" (click)="menuOpen = false">Lab</a></li>
-    <li><a href="#doctors" (click)="menuOpen = false">Doctors</a></li>
-    <a class="mobile-cta" href="#">Book Appointment</a>
+    <li><a href="#" (click)="scrollToSection('home', $event)">Home</a></li>
+    <li><a href="#about" (click)="scrollToSection('about', $event)">About</a></li>
+    <li><a href="#services" (click)="scrollToSection('services', $event)">Services</a></li>
+    <li><a href="#labs" (click)="scrollToSection('labs', $event)">Lab</a></li>
+    <li><a href="#doctors" (click)="scrollToSection('doctors', $event)">Doctors</a></li>
+    <a class="mobile-cta" href="#" (click)="scrollToSection('doctors', $event)">Book Appointment</a>
   </ul>
 </nav>

@@ -20,7 +20,6 @@ interface ContactInfo {
     phone: string;
     email: string;
     emergency: string;
-    fax: string;
   };
   social: {
     facebook: string;
@@ -50,20 +49,19 @@ export class Footer {
       address: 'Zimmerman',
       city: 'Nairobi',
       country: 'Kenya',
-      phone: '+254 700 123 456',
+      phone: '+254 722560062',
       email: 'info@sidiantrinity.co.ke',
-      hours: 'Mon-Fri: 8AM-8PM',
-      weekend: 'Sat: 9AM-5PM, Sun: Closed',
+      hours: 'Mon-Fri: 8AM-11PM',
+      weekend: 'Sat: 8AM-11PM, Sun: 8AM-2PM',
       mapsUrl: 'https://maps.app.goo.gl/BdM3azHw2WkrWtX6A'
     },
   ];
 
   contactInfo: ContactInfo = {
     general: {
-      phone: '+254 700 123 456',
+      phone: '+254 722560062',
       email: 'info@sidiantrinity.co.ke',
-      emergency: '+254 700 999 911',
-      fax: '+254 20 123 4567'
+      emergency: '+254 700 999 911'
     },
     social: {
       facebook: 'https://facebook.com/sidiantrinity',

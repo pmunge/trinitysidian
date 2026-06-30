@@ -21,87 +21,91 @@ export class Lab implements AfterViewInit  {
   ){}
   labServices: LabService[] = [
     //blood test
-    {
-      name: 'Full Haemogram',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'blood'
-    },
-    {
-      name: 'Blood Sugars',
-      description: 'Detailed urine analysis to detect infections, kidney issues, and overall health status.',
-      image: 'images/urine.jpg',
-      category: 'blood'
-    },
-    {
-      name: 'Haemoglobin levels',
-      description: 'Advanced X-ray imaging for precise diagnosis of bone fractures, lung conditions, and more.',
-      image: 'images/xray.jpg',
-      category: 'blood'
-    },
-    {
-      name: 'Malaria RDT',
-      description: 'lorem ipsium',
-      image : 'images/hiv.jpg',
-      category: 'blood'
-    },
-     {
-      name: 'Blood Group & RhFactor',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'blood'
-    },
-     {
-      name: 'Val Syphilis',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'blood'
-    },
-     {
-      name: 'HIV',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'blood'
-    },
-     {
-      name: 'Hepatitis',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'blood'
-    },
-    //stool test
-     {
-      name: 'Salmonella',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'stool'
-    },
-     {
-      name: 'Helicobacter Pylori',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'stool'
-    },
-     {
-      name: 'Rota Virus',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'stool'
-    },
-    //urine test
-     {
-      name: 'Urinalysis',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'urine'
-    },
-     {
-      name: 'Pregnancy ',
-      description: 'Comprehensive blood testing services for accurate diagnosis and health monitoring.',
-      image: 'images/blood.jpg',
-      category: 'urine'
-    },
+    
+  {
+    name: 'Full Haemogram',
+    description: 'A complete blood count that evaluates your overall health and helps detect infections, anemia, inflammation, and other blood disorders.',
+    image: 'images/blood.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'Blood Sugars',
+    description: 'Measures the level of glucose in your blood to help diagnose and monitor diabetes and other blood sugar-related conditions.',
+    image: 'images/urine.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'Haemoglobin Levels',
+    description: 'Determines the amount of haemoglobin in your blood to assess anemia, oxygen-carrying capacity, and overall blood health.',
+    image: 'images/xray.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'Malaria RDT',
+    description: 'A rapid diagnostic test that detects malaria parasites in the blood, providing quick and reliable results for prompt treatment.',
+    image: 'images/hiv.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'Blood Group & Rh Factor',
+    description: 'Identifies your blood type and Rh factor, which are essential for safe blood transfusions, pregnancy care, and medical procedures.',
+    image: 'images/blood.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'VDRL (Syphilis Test)',
+    description: 'Screens for syphilis by detecting antibodies in the blood, enabling early diagnosis and timely treatment.',
+    image: 'images/blood.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'HIV',
+    description: 'Confidential HIV testing for early detection, routine screening, and effective management with professional counseling and support.',
+    image: 'images/blood.jpg',
+    category: 'blood'
+  },
+  {
+    name: 'Hepatitis',
+    description: 'Detects hepatitis virus infections to support early diagnosis, treatment, and protection of liver health.',
+    image: 'images/blood.jpg',
+    category: 'blood'
+  },
 
+  // Stool Tests
+
+  {
+    name: 'Salmonella',
+    description: 'Detects Salmonella bacteria in stool samples to diagnose foodborne infections causing diarrhea, fever, and abdominal pain.',
+    image: 'images/blood.jpg',
+    category: 'stool'
+  },
+  {
+    name: 'Helicobacter Pylori',
+    description: 'Identifies Helicobacter pylori infection, a common cause of stomach ulcers, gastritis, and persistent abdominal discomfort.',
+    image: 'images/blood.jpg',
+    category: 'stool'
+  },
+  {
+    name: 'Rota Virus',
+    description: 'Detects Rotavirus infection, a leading cause of severe diarrhea and dehydration, particularly in infants and young children.',
+    image: 'images/blood.jpg',
+    category: 'stool'
+  },
+
+  // Urine Tests
+
+  {
+    name: 'Urinalysis',
+    description: 'A comprehensive urine examination used to detect urinary tract infections, kidney disease, diabetes, and other health conditions.',
+    image: 'images/blood.jpg',
+    category: 'urine'
+  },
+  {
+    name: 'Pregnancy Test',
+    description: 'Detects the pregnancy hormone (hCG) in urine to provide a quick and accurate confirmation of pregnancy.',
+    image: 'images/blood.jpg',
+    category: 'urine'
+  }
 
   ]
 

@@ -37,3 +37,13 @@ export interface Stat{
     value: string,
     label: string,
 }
+
+export interface ReasonChoice {
+    id?: number;
+    number: string;
+    title: string;
+    description: string[];
+    image: string;
+    icon?: 'users' | 'heart' | 'clock' | 'family';
+
+}

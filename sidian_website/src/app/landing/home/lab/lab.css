@@ -10,17 +10,37 @@
   padding-top: 1rem;
 }
 
-.lab-title {
-  color: #ffffff;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
+.section-kicker {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #8b2edb;
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
-.lab-subtitle {
-  color: #7a3d68;
-  font-size: 1.1rem;
+.lab-title {
   margin: 0;
+  color: #2d216b;
+  font-size: clamp(2.25rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.section-subtitle {
+  margin: 12px 0 0;
+  color: #4f4b75;
+  font-size: 1.05rem;
+}
+
+.section-line {
+  width: 80px;
+  height: 3px;
+  border-radius: 999px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, rgba(170, 96, 200, 0.12), #aa60c8, rgba(170, 96, 200, 0.12));
 }
 
 ::ng-deep .mat-mdc-tab-body-content {
@@ -73,5 +93,9 @@ mat-card-content p {
 
   .lab-title {
     font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.98rem;
   }
 }

@@ -1,0 +1,58 @@
+<section class="choice-section">
+  <div class="choice-shell">
+    <header class="choice-heading">
+      <span>WHY CHOOSE US</span>
+      <h2>Why Patients Choose Us</h2>
+      <div class="choice-heading-line"></div>
+    </header>
+
+    <div class="choice-timeline">
+      <div class="choice-row" *ngFor="let item of reasonChoices; let i = index">
+        <div class="choice-visual">
+          <div class="choice-circle">
+            <img [src]="item.image" [alt]="item.title" />
+          </div>
+
+          <span class="choice-icon" [ngSwitch]="item.icon" aria-hidden="true">
+              <svg *ngSwitchCase="'users'" viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11Zm-8 0a3.5 3.5 0 1 0-3.5-3.5A3.5 3.5 0 0 0 8 11Zm0 2c-3.33 0-6 1.67-6 4.18V19h8v-1.82C10 14.67 11.12 13.61 13 13h-1.42A7.4 7.4 0 0 0 8 13Z" fill="currentColor" />
+              </svg>
+              <svg *ngSwitchCase="'heart'" viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M12 21.2 10.6 20C5.2 15.1 2 12.3 2 8.8 2 6 4.2 3.8 7 3.8c1.6 0 3.1.8 4 2.1.9-1.3 2.4-2.1 4-2.1 2.8 0 5 2.2 5 5 0 3.5-3.2 6.3-8.6 11.2L12 21.2Z" fill="currentColor" />
+              </svg>
+              <svg *ngSwitchCase="'clock'" viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9Zm1 9.4 3.2 1.9-.9 1.5L11 13V7h2Z" fill="currentColor" />
+              </svg>
+              <svg *ngSwitchCase="'family'" viewBox="0 0 24 24" role="presentation" focusable="false">
+                <path d="M8.5 11.5A3 3 0 1 0 5.5 8.5a3 3 0 0 0 3 3Zm7 0a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5ZM3 19.2V18c0-2.2 2.4-4 5.5-4a7 7 0 0 1 2.2.34A6.5 6.5 0 0 0 10 18v1.2Zm10.5 0V18c0-1.84 1.95-3.3 4.5-3.3s4.5 1.46 4.5 3.3v1.2Z" fill="currentColor" />
+              </svg>
+            </span>
+        </div>
+
+        <div class="choice-rail" aria-hidden="true">
+          <span class="choice-rail-dot"></span>
+        </div>
+
+        <article class="choice-copy">
+          <span class="choice-number">{{ item.number }}</span>
+          <h3>{{ item.title }}</h3>
+          <p *ngFor="let paragraph of item.description">{{ paragraph }}</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="choice-tagline" *ngIf="tagline">
+      <div class="choice-tagline-content">
+        <span class="choice-tagline-icon choice-tagline-icon--line" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+            <path
+              d="M12 21.2l-1.4-1.2C5.2 15.1 2 12.3 2 8.8 2 6 4.2 3.8 7 3.8c1.6 0 3.1.8 4 2.1.9-1.3 2.4-2.1 4-2.1 2.8 0 5 2.2 5 5 0 3.5-3.2 6.3-8.6 11.2L12 21.2Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <span>{{ tagline }}</span>
+      </div>
+    </div>
+  </div>
+</section>

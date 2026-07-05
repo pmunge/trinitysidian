@@ -1,17 +1,13 @@
-<!-- services.component.html -->
-
 <section class="services" id="services">
   <div class="container">
-    <!-- Heading Section -->
-    <div class="heading">
+    <header class="heading">
+      <span class="section-kicker">OUR SERVICES</span>
       <h2 class="service-heading">{{ sectionTitle }}</h2>
-      <p *ngIf="sectionSubtitle">{{ sectionSubtitle }}</p>
-    </div>
+      <p class="section-subtitle" *ngIf="sectionSubtitle">{{ sectionSubtitle }}</p>
+      <div class="section-line"></div>
+    </header>
 
-    <!-- Main Services Layout -->
     <div class="services-layout">
-
-      <!-- Left Cards (First 2 Services) -->
       <div class="cards-column">
         <div class="service-card" *ngFor="let service of services.slice(0,2)">
           <h4 class="card_id">{{service.id}}</h4>
@@ -20,12 +16,10 @@
         </div>
       </div>
 
-      <!-- Center Image -->
       <div class="center-image">
         <img [src]="centerImageUrl" alt="Services" />
       </div>
 
-      <!-- Right Cards (Last 2 Services) -->
       <div class="cards-column">
         <div class="service-card" *ngFor="let service of services.slice(2,4)">
           <h4 class="card_id">{{service.id}}</h4>
@@ -33,7 +27,6 @@
           <p class="card-text">{{ service.description }}</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>

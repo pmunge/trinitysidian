@@ -17,19 +17,45 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.heading-copy {
+  width: 100%;
+}
+
+.section-kicker {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #8b2edb;
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .service-heading {
   margin: 0;
-  color: #AA60C8;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: clamp(2.25rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  color: #2d216b;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.section-line {
+  width: 80px;
+  height: 3px;
+  border-radius: 999px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, rgba(170, 96, 200, 0.12), #aa60c8, rgba(170, 96, 200, 0.12));
 }
 
 .carousel-controls {
   display: flex;
   gap: 0.5rem;
+  flex: 0 0 auto;
 }
 
 .carousel-btn {
@@ -121,6 +147,19 @@
 
   .heading {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .heading-copy {
+    width: auto;
+  }
+
+  .section-kicker {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  .service-heading {
+    font-size: 2rem;
   }
 }

@@ -20,26 +20,38 @@
   z-index: 0;
 }
 
-/* ── Section heading ── */
-.section-heading {
-  display: block;
+.section-header {
   text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  color: #aa60c8;
-  padding: 60px 8% 0;   /* matches section side padding */
+  padding: 60px 8% 0;
   margin: 0;
-  letter-spacing: 0.01em;
 }
 
-.section-heading::after {
-  content: '';
+.section-kicker {
   display: block;
-  width: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #8b2edb;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: block;
+  margin: 0;
+  color: #2d216b;
+  font-size: clamp(2.25rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.section-line {
+  width: 80px;
   height: 3px;
-  background: linear-gradient(to right, #aa60c8, #d69ade);
-  border-radius: 2px;
-  margin: 10px auto 0;
+  border-radius: 999px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, rgba(170, 96, 200, 0.12), #aa60c8, rgba(170, 96, 200, 0.12));
 }
 
 /* ── Each tip row ── */
@@ -216,4 +228,24 @@ section.tip-2 {
   .text-container p { margin: 0 auto; }
 
   .text-container p::after { margin: 20px auto 0; }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    padding: 40px 6% 0;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .section-line {
+    width: 64px;
+    margin-top: 14px;
+  }
+
+  .section-kicker {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
 }

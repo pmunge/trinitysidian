@@ -7,6 +7,7 @@ import { ServicesComponent } from './services-section/services-section';
 import { Lab } from './lab/lab';
 import { TestimonialsSection } from './testimonials-section/testimonials-section';
 import { DoctorsSection } from './doctors-section/doctors-section';
+import { Choice } from './choice/choice';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,10 @@ import { DoctorsSection } from './doctors-section/doctors-section';
     ServicesComponent,
     DoctorsSection,
     Lab,
-    TestimonialsSection
+    TestimonialsSection,
+    Choice
   ],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css'],
 })
 export class Home {}

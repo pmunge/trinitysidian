@@ -30,6 +30,11 @@ interface ContactInfo {
   };
 }
 
+interface QuickLink {
+  name: string;
+  sectionId: string;
+}
+
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -72,11 +77,11 @@ export class Footer {
     }
   };
 
-  quickLinks = [
-    { name: 'Home', path: '/home' },
-    { name: 'Services', path: '/services' },
-    { name: 'Doctors', path: '/doctors' },
-    { name: 'Contact', path: '/contact' }
+  quickLinks: QuickLink[] = [
+    { name: 'Home', sectionId: 'home' },
+    { name: 'Services', sectionId: 'services' },
+    { name: 'Doctors', sectionId: 'doctors' },
+    { name: 'Contact', sectionId: 'contact' }
   ];
 
   legalLinks = [
@@ -102,8 +107,26 @@ export class Footer {
   const url = 'https://maps.app.goo.gl/BdM3azHw2WkrWtX6A';
   window.open(url, '_blank');
   }
+
+  scrollToSection(sectionId: string, event?: Event): void {
+    event?.preventDefault();
+
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      return;
+    }
+
+    const offset = 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
   scrollToTop() {
-    document.documentElement.scrollTop = 0;
-    // or window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
